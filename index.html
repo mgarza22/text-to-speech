@@ -40,21 +40,21 @@
     <h1 class="mdc-typography--display1">Hello, World!</h1>
     
      <input type="text" name="Pharse" id="Phrase">
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="Standard mdc-button mdc-button--raised">
       Say Phrase
     </button>
     
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="standard mdc-button mdc-button--raised">
       CS 100
     </button>
     <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       University of Illinois at Chicago 
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="special mdc-button mdc-button--raised">
       Haters gonna hate
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="special mdc-button mdc-button--raised">
       ayyye
     </button>
     
@@ -100,11 +100,13 @@
             
         // hook up event handler on the buttons
         
-         $("button").on("click", function() {
+         $("button.standard").on("click", function() {
            sayIt($(this).text());
          });
         
-
+$("button.special").on("click", function() {
+           sayIt($('#phrase").val());
+         });
 
 
         // need to be able to clear the cache to load new versions
